@@ -5,7 +5,7 @@ import { publicGuard } from './core/guards/auth.guard';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -23,6 +23,18 @@ export const routes: Routes = [
     path: 'about',
     loadComponent: () =>
       import('./features/about/pages/about-page/about-page').then((m) => m.AboutPage),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'services',
+    loadComponent: () =>
+      import('./features/services/pages/services-page/services-page').then((m) => m.ServicesPage),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./features/contact/pages/contact-page/contact-page').then((m) => m.ContactPage),
     canActivate: [authGuard]
   },
   {

@@ -1,0 +1,105 @@
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.services-hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: 
+    radial-gradient(ellipse at 50% 100%, rgba(201, 162, 39, 0.1) 0%, transparent 60%),
+    var(--luxury-black);
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+.gold {
+  color: var(--luxury-gold);
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  opacity: 0;
+  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--luxury-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--luxury-gold);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--luxury-white);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--luxury-silver);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(201, 162, 39, 0.05) 100%);
+  
+  p {
+    font-size: 1.25rem;
+    color: var(--luxury-cream);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--luxury-black);
+  background: var(--luxury-gold);
+  transition: all 0.4s ease;
+  
+  &:hover {
+    background: var(--luxury-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+  }
+}
