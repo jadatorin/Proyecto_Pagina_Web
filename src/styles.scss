@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --luxury-black: #0a0a0a;
+  --luxury-dark: #1a1a1a;
+  --luxury-gold: #c9a227;
+  --luxury-gold-light: #e8d48a;
+  --luxury-cream: #f5f0e8;
+  --luxury-silver: #a8a8a8;
+  --luxury-white: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,18 +21,65 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--luxury-cream);
+  background-color: var(--luxury-black);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--luxury-white);
 }
 
 a {
   text-decoration: none;
-  color: #3f51b5;
-  transition: color 0.3s;
+  color: var(--luxury-gold);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   &:hover {
-    color: #283593;
+    color: var(--luxury-gold-light);
   }
 }
+
+::selection {
+  background: var(--luxury-gold);
+  color: var(--luxury-black);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }

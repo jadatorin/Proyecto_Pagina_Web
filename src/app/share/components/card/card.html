@@ -1,0 +1,8 @@
+<div class="card" [class.hoverable]="hoverable">
+  <div class="card-icon" *ngIf="icon">{{ icon }}</div>
+  <h3 class="card-title" *ngIf="title">{{ title }}</h3>
+  <p class="card-content">
+    <ng-content></ng-content>
+  </p>
+  <a *ngIf="link" [routerLink]="link" class="card-link">Leer más →</a>
+</div>

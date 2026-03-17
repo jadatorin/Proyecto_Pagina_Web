@@ -1,0 +1,152 @@
+header {
+  background: linear-gradient(180deg, rgba(10,10,10,0.98) 0%, rgba(26,26,26,0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--luxury-gold);
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--luxury-gold);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+}
+
+ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+a {
+  color: var(--luxury-cream);
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--luxury-gold);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a:hover {
+  color: var(--luxury-gold);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--luxury-gold);
+  font-weight: 600;
+}
+
+.active::after {
+  width: 100%;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid var(--luxury-gold);
+  padding: 0.6rem 1.5rem;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: var(--luxury-gold);
+  color: var(--luxury-black);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+    display: none;
+    z-index: 999;
+    
+    &.open {
+      display: flex;
+    }
+    
+    li {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  a {
+    display: block;
+    padding: 1rem;
+  }
+  
+  .logout-btn {
+    margin: 1rem 0;
+    padding: 0.8rem 2rem;
+  }
+}

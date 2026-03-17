@@ -1,0 +1,47 @@
+.card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  padding: 2rem;
+  transition: all 0.4s ease;
+  
+  &.hoverable:hover {
+    transform: translateY(-5px);
+    border-color: var(--luxury-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--luxury-gold);
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--luxury-white);
+}
+
+.card-content {
+  font-size: 0.95rem;
+  color: var(--luxury-silver);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: var(--luxury-gold-light);
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,24 @@
+<div class="carousel-container">
+  <div 
+    class="carousel-track" 
+    [style.width.%]="getTrackWidth()"
+    [style.animationDuration]="getAnimationDuration() + 's'">
+    <div class="carousel-slide" *ngFor="let slide of getInfiniteSlides()">
+      <div class="slide-content" [style.backgroundImage]="'url(' + slide.image + ')'">
+        <div class="slide-overlay">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="carousel-dots">
+    <span 
+      *ngFor="let slide of slides; let i = index" 
+      class="dot" 
+      [class.active]="currentIndex === i"
+      (click)="goTo(i)">
+    </span>
+  </div>
+</div>

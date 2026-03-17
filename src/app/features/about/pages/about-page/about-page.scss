@@ -1,0 +1,73 @@
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: 
+    radial-gradient(ellipse at 50% 100%, rgba(201, 162, 39, 0.1) 0%, transparent 60%),
+    var(--luxury-black);
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+.gold {
+  color: var(--luxury-gold);
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--luxury-white);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--luxury-gold);
+  margin: 2rem 0;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--luxury-silver);
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}

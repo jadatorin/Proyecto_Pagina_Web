@@ -1,0 +1,143 @@
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.contact-hero {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: 
+    radial-gradient(ellipse at 50% 100%, rgba(201, 162, 39, 0.1) 0%, transparent 60%),
+    var(--luxury-black);
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--luxury-silver);
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+.gold {
+  color: var(--luxury-gold);
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.contact-info {
+  .info-item {
+    margin-bottom: 2rem;
+    
+    .label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--luxury-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    a, span {
+      font-size: 1.1rem;
+      color: var(--luxury-cream);
+    }
+    
+    a:hover {
+      color: var(--luxury-gold);
+    }
+  }
+}
+
+.contact-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--luxury-cream);
+    margin-bottom: 0.5rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    border-radius: 2px;
+    font-size: 1rem;
+    color: var(--luxury-white);
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    
+    &::placeholder {
+      color: var(--luxury-silver);
+      opacity: 0.5;
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: var(--luxury-gold);
+      background: rgba(201, 162, 39, 0.05);
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--luxury-gold);
+  color: var(--luxury-black);
+  border: none;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--luxury-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+  }
+}

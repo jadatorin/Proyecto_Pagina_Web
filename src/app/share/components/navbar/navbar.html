@@ -1,0 +1,35 @@
+<header>
+  <nav aria-label="Navegación principal">
+    <div class="logo">JADA</div>
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul [class.open]="isMenuOpen()">
+      <li>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Sobre nosotros</a>
+      </li>
+      <li>
+        <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Servicios</a>
+      </li>
+      <li>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contacto</a>
+      </li>
+      @if (authService.isLoggedIn()) {
+        <li>
+          <button class="logout-btn" (click)="logout()">Cerrar Sesión</button>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>

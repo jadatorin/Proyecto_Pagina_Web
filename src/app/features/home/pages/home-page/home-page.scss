@@ -1,0 +1,91 @@
+main {
+  min-height: 100vh;
+}
+
+app-carousel {
+  display: block;
+  height: 60vh;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--luxury-white) 0%, var(--luxury-cream) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold {
+  color: var(--luxury-gold);
+  -webkit-text-fill-color: var(--luxury-gold);
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--luxury-silver);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--luxury-black);
+  background: var(--luxury-gold);
+  border: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-btn:hover {
+  background: var(--luxury-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
