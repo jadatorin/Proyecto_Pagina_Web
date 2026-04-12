@@ -1,9 +1,18 @@
 .card {
-  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 220px;
+  background: linear-gradient(
+    145deg,
+    rgba(26, 26, 26, 0.8) 0%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
   border: 1px solid rgba(201, 162, 39, 0.15);
   padding: 2rem;
   transition: all 0.4s ease;
-  
+
   &.hoverable:hover {
     transform: translateY(-5px);
     border-color: var(--luxury-gold);
@@ -39,7 +48,7 @@
   text-transform: uppercase;
   color: var(--luxury-gold);
   transition: all 0.3s ease;
-  
+
   &:hover {
     color: var(--luxury-gold-light);
     transform: translateX(5px);
